@@ -1,54 +1,217 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic UI</title>
+    <title>Lavan Sivakumar | Cybersecurity Analyst</title>
+
+    <!-- Cyber Aesthetic Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
         }
-        .container {
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-        h1 {
+
+        header {
+            padding: 60px 20px;
             text-align: center;
+            background: linear-gradient(to bottom, #000000, #0a0a0a);
         }
-        input, button {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            box-sizing: border-box;
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #00ff88;
         }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00ff88;
+            margin-top: 40px;
         }
-        button:hover {
-            background-color: #45a049;
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #b5b5b5;
+        }
+
+        /* Sections */
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+            border-bottom: 1px solid #222;
+        }
+
+        .highlight {
+            color: #00ff88;
+        }
+
+        /* Boxes */
+        .box {
+            background: #111;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #222;
+        }
+
+        /* Skills grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .skill {
+            background: #141414;
+            padding: 12px;
+            border-left: 3px solid #00ff88;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 3px solid #00ff88;
+            background: #141414;
+        }
+
+        a {
+            color: #00ff88;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .contact-box {
+            text-align: center;
+            line-height: 1.8;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Basic UI</h1>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
+<header>
+    <h1>Lavan Sivakumar</h1>
+    <p class="tagline">Cybersecurity Analyst (Entry-Level) | Adversarial Thinker | Network Defence</p>
+</header>
 
-            <button type="submit">Submit</button>
-        </form>
+<section id="about">
+    <h2>About Me</h2>
+    <div class="box">
+        <p>
+            Cybersecurity undergraduate specialised in <span class="highlight">adversarial thinking, network defence, 
+            and distributed systems</span>. Skilled in analysing networks, building load balancers, detecting threats, 
+            and developing security-oriented software systems.
+        </p>
     </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-box box">
+        <p><strong>Phone:</strong> +44 7365 918 823</p>
+        <p><strong>Email:</strong> <a href="mailto:imlavansivakumar@gmail.com">imlavansivakumar@gmail.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/im-Lavan" target="_blank">github.com/im-Lavan</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/lavansivakumar" target="_blank">lavansivakumar</a></p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill"><strong>Security</strong><br>Wireshark, Nmap, Burp Suite, Log Analysis</div>
+        <div class="skill"><strong>Networking</strong><br>DNS, DHCP, VLAN, Routing, Cisco Packet Tracer</div>
+        <div class="skill"><strong>Programming</strong><br>Python, Java, SQL</div>
+        <div class="skill"><strong>Tools</strong><br>Linux, Windows Server, Git, GitHub</div>
+        <div class="skill"><strong>Cloud</strong><br>Azure (Learning)</div>
+
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+
+    <div class="box">
+        <p><strong>BSc Cybersecurity</strong> — Nottingham Trent University (2023–2026)</p>
+        <p><strong>A/L Engineering Technology</strong> — Jaffna Hindu College (2018–2022)</p>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Experience</h2>
+
+    <div class="box">
+        <p><strong>Student Mentor — NTU</strong> (Aug 2024 – May 2025)</p>
+        <ul>
+            <li>Guided first-year students academically and technically.</li>
+            <li>Supported their transition into university life.</li>
+            <li>Assisted with networking basics and computing modules.</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <p><strong>Convenience Store Associate</strong> (2024 – Present)</p>
+        <ul>
+            <li>Accuracy under pressure during long shifts.</li>
+            <li>Cash handling and stock management.</li>
+            <li>Customer support and attention to detail.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+    <div class="box">
+        <p><strong>SAL1 – Security Analyst Level 1</strong> (in progress, expected Jan 2026)</p>
+        <p><strong>Qualys – Vulnerability Management</strong></p>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>Wi-Fi Intrusion Detection & Management System</h3>
+        <p>Detects unauthorised devices, logs MAC/IP/timestamps, blocks or controls devices.</p>
+        <p><strong>Tech:</strong> Python, Scapy, SQLite</p>
+    </div>
+
+    <div class="project">
+        <h3>PCAP Analysis & Threat Detection Tool</h3>
+        <p>Extracts metadata, detects anomalies & signatures, generates automated reports.</p>
+        <p><strong>Tech:</strong> Python, Scapy</p>
+    </div>
+
+    <div class="project">
+        <h3>Distributed Load Balancer System (Java)</h3>
+        <p>Round-robin protocol, fault-tolerant client-worker architecture, dynamic task routing.</p>
+    </div>
+
+    <div class="project">
+        <h3>OWASP Top 10 Web Security Testing Platform</h3>
+        <p>Intentionally vulnerable modules for SQLi, XSS, Broken Access Control & more.</p>
+        <p><strong>Tech:</strong> Python, JavaScript, Flask</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2025 Lavan Sivakumar | Cybersecurity Portfolio</p>
+</footer>
+
 </body>
 </html>
