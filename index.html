@@ -130,14 +130,6 @@ body {
     box-shadow: 0 0 12px rgba(88,166,255,0.2);
 }
 
-@media (max-width: 600px) {
-    .countdown-box {
-        font-size: 1.5em;
-        padding: 18px 22px;
-        letter-spacing: 1px;
-    }
-}
-
 /* Visitor Counter */
 .visitor-counter {
     background: rgba(22,27,34,0.8);
@@ -192,6 +184,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: all .3s;
+    font-weight: bold;
 }
 .counter-btn:hover:not(:disabled) {
     background: rgba(88,166,255,0.2);
@@ -221,6 +214,89 @@ body {
 }
 @keyframes spin { 100% { transform: rotate(360deg);} }
 
+/* Mobile Optimizations - iPhone 16 Pro and similar */
+@media (max-width: 430px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .glitch-text {
+        font-size: 2em;
+        margin: 20px 0 15px 0;
+    }
+
+    .subtitle {
+        font-size: 0.95em;
+        margin: 10px 0 20px 0;
+    }
+
+    .countdown-box {
+        font-size: 1.3em;
+        padding: 15px 20px;
+        letter-spacing: 1px;
+        margin: 20px auto;
+    }
+
+    .visitor-counter {
+        padding: 20px 15px;
+        max-width: 95%;
+        margin: 25px auto;
+    }
+
+    .counter-title {
+        font-size: 0.85em;
+        margin-bottom: 12px;
+    }
+
+    .counter-display {
+        gap: 15px;
+        flex-direction: row;
+    }
+
+    .counter-number {
+        font-size: 2em;
+        min-width: 70px;
+    }
+
+    .counter-btn {
+        font-size: 1.2em;
+        padding: 8px 16px;
+    }
+
+    .counter-status {
+        font-size: 0.85em;
+        margin-top: 12px;
+    }
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+        margin: 20px auto;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 375px) {
+    .glitch-text {
+        font-size: 1.8em;
+    }
+
+    .countdown-box {
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+
+    .counter-number {
+        font-size: 1.8em;
+        min-width: 60px;
+    }
+
+    .counter-btn {
+        font-size: 1.1em;
+        padding: 8px 14px;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -237,7 +313,7 @@ body {
         <p style="font-size: 1.5em; color: #58a6ff;">⚠️ UNDER DEVELOPMENT</p>
     </div>
 
-    <div class="spinner"></div>
+<!--<div class="spinner"></div>-->
   
     <div class="countdown-box">
         <span id="days">00</span>d :
@@ -249,7 +325,7 @@ body {
 
     <!-- Visitor Counter -->
     <div class="visitor-counter">
-        <div class="counter-title">👁 Visitor Check-In</div>
+        <div class="counter-title">👁️ Visitor Check-In</div>
 
         <div class="counter-display">
             <button class="counter-btn" id="incrementBtn">+1</button>
@@ -289,6 +365,11 @@ function drawMatrix() {
 }
 setInterval(drawMatrix, 35);
 
+window.addEventListener('resize', () => {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+});
+
 /* Particles */
 function createParticles() {
     const container = document.getElementById('particles');
@@ -320,7 +401,8 @@ function updateCountdown() {
     document.getElementById('minutes').textContent = String(m).padStart(2, '0');
     document.getElementById('seconds').textContent = String(s).padStart(2, '0');
 }
-setInterval(updateCountdown, 00);
+updateCountdown();
+setInterval(updateCountdown, 1000);
 
 /* Visitor Check-In */
 const btn = document.getElementById('incrementBtn');
