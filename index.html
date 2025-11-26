@@ -12,363 +12,336 @@
   gtag('config', 'G-GC6VMJY40H');
 </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lavan Sivakumar - Coming Soon</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lavan Sivakumar - Coming Soon</title>
 
-        body {
-            font-family: 'Courier New', monospace;
-            background: #0a0a0a;
-            color: #e5e5e5;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Matrix Background */
-        #matrix {
-            position: fixed; top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 0; opacity: 0.15;
-        }
+body {
+    font-family: 'Courier New', monospace;
+    background: #0a0a0a;
+    color: #e5e5e5;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
 
-        /* Particles Background */
-        .particles {
-            position: fixed; top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 1; pointer-events: none;
-        }
+/* Matrix Background */
+#matrix {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0; opacity: 0.15;
+}
 
-        .particle {
-            position: absolute;
-            width: 2px; height: 2px;
-            background: #58a6ff;
-            border-radius: 50%;
-            animation: float linear infinite;
-        }
+/* Particles Background */
+.particles {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1; pointer-events: none;
+}
 
-        @keyframes float {
-            0% { transform: translateY(100vh) translateX(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
-        }
+.particle {
+    position: absolute;
+    width: 2px; height: 2px;
+    background: #58a6ff;
+    border-radius: 50%;
+    animation: float linear infinite;
+}
 
-        .container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 40px 20px;
-            max-width: 800px;
-            width: 90%;
-        }
+@keyframes float {
+    0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+}
 
-        /* Glitch Text */
-        .glitch-text {
-            font-size: 3em;
-            font-weight: bold;
-            text-transform: uppercase;
-            position: relative;
-            display: inline-block;
-            color: #e5e5e5;
-            margin: 40px 0 20px 0;
-        }
+/* Main Container */
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    width: 90%;
+}
 
-        .glitch-text::before,
-        .glitch-text::after {
-            content: attr(data-text);
-            position: absolute; top: 0; left: 0;
-            width: 100%; height: 100%;
-        }
+/* Glitch Text */
+.glitch-text {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: #e5e5e5;
+    margin: 40px 0 20px 0;
+}
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+.glitch-text::before {
+    animation: glitch-1 2.5s infinite;
+    color: #58a6ff; z-index: -1;
+}
+.glitch-text::after {
+    animation: glitch-2 2.5s infinite;
+    color: #ff6b6b; z-index: -2;
+}
 
-        .glitch-text::before {
-            animation: glitch-1 2.5s infinite;
-            color: #58a6ff; z-index: -1;
-        }
+@keyframes glitch-1 {
+    0%, 100% { transform: translate(0); opacity: 0; }
+    20% { transform: translate(-2px, 2px); opacity: 0.8; }
+    40% { transform: translate(-2px, -2px); opacity: 0; }
+    60% { transform: translate(2px, 2px); opacity: 0.8; }
+    80% { transform: translate(2px, -2px); opacity: 0; }
+}
+@keyframes glitch-2 {
+    0%, 100% { transform: translate(0); opacity: 0; }
+    25% { transform: translate(2px, -2px); opacity: 0.7; }
+    50% { transform: translate(-2px, 2px); opacity: 0; }
+    75% { transform: translate(2px, 2px); opacity: 0.7; }
+}
 
-        .glitch-text::after {
-            animation: glitch-2 2.5s infinite;
-            color: #ff6b6b; z-index: -2;
-        }
+.subtitle {
+    font-size: 1.2em;
+    color: #58a6ff;
+    margin: 10px 0 40px 0;
+    opacity: 0.9;
+}
 
-        @keyframes glitch-1 {
-            0%, 100% { transform: translate(0); opacity: 0; }
-            20% { transform: translate(-2px, 2px); opacity: 0.8; }
-            40% { transform: translate(-2px, -2px); opacity: 0; }
-            60% { transform: translate(2px, 2px); opacity: 0.8; }
-            80% { transform: translate(2px, -2px); opacity: 0; }
-        }
+/* ================================
+   NEW SINGLE COUNTDOWN BOX
+   ================================ */
+.countdown-box {
+    background: rgba(22,27,34,0.85);
+    border: 1px solid #30363d;
+    padding: 25px 35px;
+    border-radius: 10px;
+    margin: 30px auto;
+    font-size: 2.2em;
+    color: #58a6ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+    box-shadow: 0 0 12px rgba(88,166,255,0.2);
+}
 
-        @keyframes glitch-2 {
-            0%, 100% { transform: translate(0); opacity: 0; }
-            25% { transform: translate(2px, -2px); opacity: 0.7; }
-            50% { transform: translate(-2px, 2px); opacity: 0; }
-            75% { transform: translate(2px, 2px); opacity: 0.7; }
-        }
+@media (max-width: 600px) {
+    .countdown-box {
+        font-size: 1.5em;
+        padding: 18px 22px;
+        letter-spacing: 1px;
+    }
+}
 
-        .subtitle {
-            font-size: 1.2em;
-            color: #58a6ff;
-            margin: 10px 0 40px 0;
-            opacity: 0.9;
-        }
+/* Visitor Counter */
+.visitor-counter {
+    background: rgba(22,27,34,0.8);
+    border: 1px solid #30363d;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px auto;
+    max-width: 400px;
+}
 
-        /* Countdown Timer */
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
+.counter-title {
+    color: #8b949e;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-        .time-unit {
-            background: rgba(22,27,34,0.8);
-            border: 1px solid #30363d;
-            padding: 20px 25px;
-            border-radius: 8px;
-            min-width: 100px;
-            transition: all 0.3s;
-        }
+.counter-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 
-        .time-unit:hover {
-            border-color: #58a6ff;
-            box-shadow: 0 0 20px rgba(88,166,255,0.3);
-        }
+/* Redacted Blur Style */
+.counter-number {
+    font-size: 3em;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+    color: #58a6ff;
+    filter: blur(7px);
+    opacity: .6;
+    animation: pulse 2s infinite ease-in-out;
+    user-select: none;
+}
 
-        .time-value {
-            font-size: 2.5em;
-            color: #58a6ff;
-            font-weight: bold;
-        }
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.4; }
+}
 
-        .time-label {
-            font-size: 0.9em;
-            color: #8b949e;
-            margin-top: 5px;
-            text-transform: uppercase;
-        }
+.counter-btn {
+    background: rgba(88,166,255,0.1);
+    border: 2px solid #58a6ff;
+    color: #58a6ff;
+    font-family: 'Courier New';
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.counter-btn:hover:not(:disabled) {
+    background: rgba(88,166,255,0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(88,166,255,0.4);
+}
+.counter-btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
 
-        .visitor-counter {
-            background: rgba(22,27,34,0.8);
-            border: 1px solid #30363d;
-            padding: 30px;
-            border-radius: 8px;
-            margin: 40px auto;
-            max-width: 400px;
-        }
+.counter-status {
+    margin-top: 15px;
+    color: #8b949e;
+    font-size: .9em;
+}
+.status-active { color: #58a6ff; }
 
-        .counter-title {
-            color: #8b949e;
-            font-size: 0.9em;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+/* Loader */
+.spinner {
+    margin: 30px auto;
+    width: 50px; height: 50px;
+    border: 3px solid #30363d;
+    border-top: 3px solid #58a6ff;
+    border-radius:50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { 100% { transform: rotate(360deg);} }
 
-        .counter-display {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-
-        /* BLURRED COUNTER */
-        .counter-number {
-            font-size: 3em;
-            font-weight: bold;
-            min-width: 100px;
-            text-align: center;
-            color: #58a6ff;
-            filter: blur(7px);
-            opacity: .6;
-            animation: pulse 2s infinite ease-in-out;
-            user-select: none;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 0.4; }
-            50% { opacity: 0.8; }
-            100% { opacity: 0.4; }
-        }
-
-        .counter-btn {
-            background: rgba(88,166,255,0.1);
-            border: 2px solid #58a6ff;
-            color: #58a6ff;
-            font-family: 'Courier New';
-            font-size: 1.5em;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all .3s;
-        }
-
-        .counter-btn:hover:not(:disabled) {
-            background: rgba(88,166,255,0.2);
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(88,166,255,0.4);
-        }
-
-        .counter-btn:disabled {
-            opacity: .5;
-            cursor: not-allowed;
-        }
-
-        .counter-status {
-            margin-top: 15px;
-            color: #8b949e;
-            font-size: .9em;
-        }
-
-        .status-active { color: #58a6ff; }
-
-        /* Loader */
-        .spinner {
-            margin: 30px auto;
-            width: 50px; height: 50px;
-            border: 3px solid #30363d;
-            border-top: 3px solid #58a6ff;
-            border-radius:50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin { 100% { transform: rotate(360deg);} }
-
-    </style>
+</style>
 </head>
 <body>
 
-    <canvas id="matrix"></canvas>
-    <div class="particles" id="particles"></div>
+<canvas id="matrix"></canvas>
+<div class="particles" id="particles"></div>
 
-    <div class="container">
-        
-        <h1 class="glitch-text" data-text="LAVAN SIVAKUMAR">LAVAN SIVAKUMAR</h1>
-        <p class="subtitle">Cybersecurity Analyst | Security Engineering</p>
+<div class="container">
+    
+    <h1 class="glitch-text" data-text="LAVAN SIVAKUMAR">LAVAN SIVAKUMAR</h1>
+    <p class="subtitle">Cybersecurity Analyst | Security Engineering</p>
 
-        <div style="margin: 30px 0;">
-            <p style="font-size: 1.5em; color: #58a6ff;">⚠️ UNDER DEVELOPMENT</p>
-        </div>
-
-        <!-- Countdown Timer -->
-        <div class="countdown" id="countdown">
-            <div class="time-unit">
-                <span class="time-value" id="days">00</span>
-                <span class="time-label">Days</span>
-            </div>
-            <div class="time-unit">
-                <span class="time-value" id="hours">00</span>
-                <span class="time-label">Hours</span>
-            </div>
-            <div class="time-unit">
-                <span class="time-value" id="minutes">00</span>
-                <span class="time-label">Minutes</span>
-            </div>
-            <div class="time-unit">
-                <span class="time-value" id="seconds">00</span>
-                <span class="time-label">Seconds</span>
-            </div>
-        </div>
-
-        <div class="visitor-counter">
-            <div class="counter-title">👁 Visitor Check-In</div>	
-
-            <div class="counter-display">
-                <button class="counter-btn" id="incrementBtn">+1</button>
-                <span class="counter-number">[???]</span>
-            </div>
-
-            <div class="counter-status" id="counterStatus">
-                Click to confirm your presence.
-            </div>
-        </div>
-
-        <div class="spinner"></div>
+    <div style="margin: 30px 0;">
+        <p style="font-size: 1.5em; color: #58a6ff;">⚠️ UNDER DEVELOPMENT</p>
     </div>
 
-    <script>
-        /* Matrix Rain */
-        const canvas = document.getElementById('matrix');
-        const ctx = canvas.getContext('2d');
-        canvas.width = innerWidth;
-        canvas.height = innerHeight;
+    <!-- ================================
+         NEW SINGLE COUNTDOWN BOX
+         ================================ -->
+    <div class="countdown-box">
+        <span id="days">00</span>d :
+        <span id="hours">00</span>h :
+        <span id="minutes">00</span>m :
+        <span id="seconds">00</span>s
+    </div>
 
-        const chars = '01アイウエオカキクケコサシスセソタチツテト';
-        const drops = Array(Math.floor(canvas.width / 14)).fill(1);
+    <!-- Visitor Counter -->
+    <div class="visitor-counter">
+        <div class="counter-title">👁 Visitor Check-In</div>
 
-        function drawMatrix() {
-            ctx.fillStyle = 'rgba(10,10,10,0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#0f0';
-            ctx.font = '14px monospace';
+        <div class="counter-display">
+            <button class="counter-btn" id="incrementBtn">+1</button>
+            <span class="counter-number">[???]</span>
+        </div>
 
-            drops.forEach((y, i) => {
-                const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(text, i * 14, y * 14);
+        <div class="counter-status" id="counterStatus">
+            Click to confirm your presence.
+        </div>
+    </div>
 
-                if (y * 14 > canvas.height && Math.random() > 0.975) drops[i] = 0;
-                drops[i]++;
-            });
-        }
-        setInterval(drawMatrix, 35);
+    <div class="spinner"></div>
+</div>
 
-        /* Particles */
-        function createParticles() {
-            const container = document.getElementById('particles');
-            for (let i = 0; i < 50; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'particle';
-                dot.style.left = Math.random() * 100 + '%';
-                dot.style.animationDuration = Math.random() * 10 + 10 + 's';
-                dot.style.animationDelay = Math.random() * 5 + 's';
-                container.appendChild(dot);
-            }
-        }
-        createParticles();
+<script>
+/* Matrix Rain */
+const canvas = document.getElementById('matrix');
+const ctx = canvas.getContext('2d');
+canvas.width = innerWidth;
+canvas.height = innerHeight;
 
-        /* Countdown */
-        const launch = new Date('2025-12-31T00:00:00').getTime();
+const chars = '01アイウエオカキクケコサシスセソタチツテト';
+const drops = Array(Math.floor(canvas.width / 14)).fill(1);
 
-        function updateCountdown() {
-            const now = Date.now();
-            const diff = launch - now;
+function drawMatrix() {
+    ctx.fillStyle = 'rgba(10,10,10,0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#0f0';
+    ctx.font = '14px monospace';
 
-            const d = Math.floor(diff / 86400000);
-            const h = Math.floor((diff % 86400000) / 3600000);
-            const m = Math.floor((diff % 3600000) / 60000);
-            const s = Math.floor((diff % 60000) / 1000);
+    drops.forEach((y, i) => {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * 14, y * 14);
 
-            document.getElementById('days').textContent = String(d).padStart(2, '0');
-            document.getElementById('hours').textContent = String(h).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(m).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(s).padStart(2, '0');
-        }
-        setInterval(updateCountdown, 1000);
+        if (y * 14 > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
+    });
+}
+setInterval(drawMatrix, 35);
 
-        /* === UPDATED VISITOR CHECK-IN LOGIC === */
-        const btn = document.getElementById('incrementBtn');
-        const status = document.getElementById('counterStatus');
+/* Particles */
+function createParticles() {
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'particle';
+        dot.style.left = Math.random() * 100 + '%';
+        dot.style.animationDuration = Math.random() * 10 + 10 + 's';
+        dot.style.animationDelay = Math.random() * 5 + 's';
+        container.appendChild(dot);
+    }
+}
+createParticles();
 
-        if (localStorage.getItem("visited") === "yes") {
-            btn.disabled = true;
-            status.textContent = "✓ Visit confirmed earlier";
-            status.classList.add("status-active");
-        }
+/* Countdown Timer */
+const launch = new Date('2025-12-31T00:00:00').getTime();
 
-        btn.addEventListener("click", () => {
-            localStorage.setItem("visited", "yes");
-            btn.disabled = true;
-            status.textContent = "✓ Visit recorded. Thank you.";
-            status.classList.add("status-active");
-        });
+function updateCountdown() {
+    const now = Date.now();
+    const diff = launch - now;
 
-    </script>
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+
+    document.getElementById('days').textContent = String(d).padStart(2, '0');
+    document.getElementById('hours').textContent = String(h).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(m).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(s).padStart(2, '0');
+}
+setInterval(updateCountdown, 1000);
+
+/* Visitor Check-In */
+const btn = document.getElementById('incrementBtn');
+const status = document.getElementById('counterStatus');
+
+if (localStorage.getItem("visited") === "yes") {
+    btn.disabled = true;
+    status.textContent = "✓ Visit confirmed earlier";
+    status.classList.add("status-active");
+}
+
+btn.addEventListener("click", () => {
+    localStorage.setItem("visited", "yes");
+    btn.disabled = true;
+    status.textContent = "✓ Visit recorded. Thank you.";
+    status.classList.add("status-active");
+});
+
+</script>
 </body>
 </html>
-
-
