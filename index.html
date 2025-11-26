@@ -115,9 +115,7 @@ body {
     opacity: 0.9;
 }
 
-/* ================================
-   NEW SINGLE COUNTDOWN BOX
-   ================================ */
+
 .countdown-box {
     background: rgba(22,27,34,0.85);
     border: 1px solid #30363d;
@@ -233,21 +231,21 @@ body {
 <div class="container">
     
     <h1 class="glitch-text" data-text="LAVAN SIVAKUMAR">LAVAN SIVAKUMAR</h1>
-    <p class="subtitle">Cybersecurity Analyst | Security Engineering</p>
+    <p class="subtitle">Entry Level Cybersecurity Analyst | Security Engineering</p>
 
     <div style="margin: 30px 0;">
         <p style="font-size: 1.5em; color: #58a6ff;">⚠️ UNDER DEVELOPMENT</p>
     </div>
 
-    <!-- ================================
-         NEW SINGLE COUNTDOWN BOX
-         ================================ -->
+    <div class="spinner"></div>
+  
     <div class="countdown-box">
         <span id="days">00</span>d :
         <span id="hours">00</span>h :
         <span id="minutes">00</span>m :
         <span id="seconds">00</span>s
     </div>
+
 
     <!-- Visitor Counter -->
     <div class="visitor-counter">
@@ -263,7 +261,6 @@ body {
         </div>
     </div>
 
-    <div class="spinner"></div>
 </div>
 
 <script>
@@ -323,7 +320,7 @@ function updateCountdown() {
     document.getElementById('minutes').textContent = String(m).padStart(2, '0');
     document.getElementById('seconds').textContent = String(s).padStart(2, '0');
 }
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown, 00);
 
 /* Visitor Check-In */
 const btn = document.getElementById('incrementBtn');
