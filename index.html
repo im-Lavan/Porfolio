@@ -1,428 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GC6VMJY40H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GC6VMJY40H');
-</script>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lavan Sivakumar - Coming Soon</title>
-
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    font-family: 'Courier New', monospace;
-    background: #0a0a0a;
-    color: #e5e5e5;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-/* Matrix Background */
-#matrix {
-    position: fixed; top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 0; opacity: 0.15;
-}
-
-/* Particles Background */
-.particles {
-    position: fixed; top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 1; pointer-events: none;
-}
-
-.particle {
-    position: absolute;
-    width: 2px; height: 2px;
-    background: #58a6ff;
-    border-radius: 50%;
-    animation: float linear infinite;
-}
-
-@keyframes float {
-    0% { transform: translateY(100vh) translateX(0); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
-}
-
-/* Main Container */
-.container {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 40px 20px;
-    max-width: 800px;
-    width: 90%;
-}
-
-/* Glitch Text */
-.glitch-text {
-    font-size: 3em;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;
-    color: #e5e5e5;
-    margin: 40px 0 20px 0;
-}
-.glitch-text::before,
-.glitch-text::after {
-    content: attr(data-text);
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%;
-}
-.glitch-text::before {
-    animation: glitch-1 2.5s infinite;
-    color: #58a6ff; z-index: -1;
-}
-.glitch-text::after {
-    animation: glitch-2 2.5s infinite;
-    color: #ff6b6b; z-index: -2;
-}
-
-@keyframes glitch-1 {
-    0%, 100% { transform: translate(0); opacity: 0; }
-    20% { transform: translate(-2px, 2px); opacity: 0.8; }
-    40% { transform: translate(-2px, -2px); opacity: 0; }
-    60% { transform: translate(2px, 2px); opacity: 0.8; }
-    80% { transform: translate(2px, -2px); opacity: 0; }
-}
-@keyframes glitch-2 {
-    0%, 100% { transform: translate(0); opacity: 0; }
-    25% { transform: translate(2px, -2px); opacity: 0.7; }
-    50% { transform: translate(-2px, 2px); opacity: 0; }
-    75% { transform: translate(2px, 2px); opacity: 0.7; }
-}
-
-.subtitle {
-    font-size: 1.2em;
-    color: #58a6ff;
-    margin: 10px 0 40px 0;
-    opacity: 0.9;
-}
-
-
-.countdown-box {
-    background: rgba(22,27,34,0.85);
-    border: 1px solid #30363d;
-    padding: 25px 35px;
-    border-radius: 10px;
-    margin: 30px auto;
-    font-size: 2.2em;
-    color: #58a6ff;
-    font-weight: bold;
-    letter-spacing: 2px;
-    display: inline-block;
-    box-shadow: 0 0 12px rgba(88,166,255,0.2);
-}
-
-/* Visitor Counter */
-.visitor-counter {
-    background: rgba(22,27,34,0.8);
-    border: 1px solid #30363d;
-    padding: 30px;
-    border-radius: 8px;
-    margin: 40px auto;
-    max-width: 400px;
-}
-
-.counter-title {
-    color: #8b949e;
-    font-size: 0.9em;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.counter-display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Redacted Blur Style */
-.counter-number {
-    font-size: 3em;
-    font-weight: bold;
-    min-width: 100px;
-    text-align: center;
-    color: #58a6ff;
-    filter: blur(7px);
-    opacity: .6;
-    animation: pulse 2s infinite ease-in-out;
-    user-select: none;
-}
-
-@keyframes pulse {
-    0% { opacity: 0.4; }
-    50% { opacity: 0.8; }
-    100% { opacity: 0.4; }
-}
-
-.counter-btn {
-    background: rgba(88,166,255,0.1);
-    border: 2px solid #58a6ff;
-    color: #58a6ff;
-    font-family: 'Courier New';
-    font-size: 1.5em;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all .3s;
-    font-weight: bold;
-}
-.counter-btn:hover:not(:disabled) {
-    background: rgba(88,166,255,0.2);
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(88,166,255,0.4);
-}
-.counter-btn:disabled {
-    opacity: .5;
-    cursor: not-allowed;
-}
-
-.counter-status {
-    margin-top: 15px;
-    color: #8b949e;
-    font-size: .9em;
-}
-.status-active { color: #58a6ff; }
-
-/* Loader */
-.spinner {
-    margin: 30px auto;
-    width: 50px; height: 50px;
-    border: 3px solid #30363d;
-    border-top: 3px solid #58a6ff;
-    border-radius:50%;
-    animation: spin 1s linear infinite;
-}
-@keyframes spin { 100% { transform: rotate(360deg);} }
-
-/* Mobile Optimizations - iPhone 16 Pro and similar */
-@media (max-width: 430px) {
-    .container {
-        padding: 20px 15px;
-    }
-
-    .glitch-text {
-        font-size: 2em;
-        margin: 20px 0 15px 0;
-    }
-
-    .subtitle {
-        font-size: 0.95em;
-        margin: 10px 0 20px 0;
-    }
-
-    .countdown-box {
-        font-size: 1.3em;
-        padding: 15px 20px;
-        letter-spacing: 1px;
-        margin: 20px auto;
-    }
-
-    .visitor-counter {
-        padding: 20px 15px;
-        max-width: 95%;
-        margin: 25px auto;
-    }
-
-    .counter-title {
-        font-size: 0.85em;
-        margin-bottom: 12px;
-    }
-
-    .counter-display {
-        gap: 15px;
-        flex-direction: row;
-    }
-
-    .counter-number {
-        font-size: 2em;
-        min-width: 70px;
-    }
-
-    .counter-btn {
-        font-size: 1.2em;
-        padding: 8px 16px;
-    }
-
-    .counter-status {
-        font-size: 0.85em;
-        margin-top: 12px;
-    }
-
-    .spinner {
-        width: 40px;
-        height: 40px;
-        margin: 20px auto;
-    }
-}
-
-/* Extra small screens */
-@media (max-width: 375px) {
-    .glitch-text {
-        font-size: 1.8em;
-    }
-
-    .countdown-box {
-        font-size: 1.1em;
-        padding: 12px 15px;
-    }
-
-    .counter-number {
-        font-size: 1.8em;
-        min-width: 60px;
-    }
-
-    .counter-btn {
-        font-size: 1.1em;
-        padding: 8px 14px;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavan Sivakumar - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<canvas id="matrix"></canvas>
-<div class="particles" id="particles"></div>
-
-<div class="container">
+    <div class="scanlines"></div>
     
-    <h1 class="glitch-text" data-text="LAVAN SIVAKUMAR">LAVAN SIVAKUMAR</h1>
-    <p class="subtitle">Entry Level Cybersecurity Analyst | Security Engineering</p>
-
-    <div style="margin: 30px 0;">
-        <p style="font-size: 1.5em; color: #58a6ff;">⚠️ UNDER DEVELOPMENT</p>
-    </div>
-
-<!--<div class="spinner"></div>-->
-  
-    <div class="countdown-box">
-        <span id="days">00</span>d :
-        <span id="hours">00</span>h :
-        <span id="minutes">00</span>m :
-        <span id="seconds">00</span>s
-    </div>
-
-
-    <!-- Visitor Counter -->
-    <div class="visitor-counter">
-        <div class="counter-title">👁️ Visitor Check-In</div>
-
-        <div class="counter-display">
-            <button class="counter-btn" id="incrementBtn">+1</button>
-            <span class="counter-number">[???]</span>
+    <nav class="navbar">
+        <div class="container">
+            <div class="terminal-prompt"> </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="hackme.html">Hackme</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <div class="counter-status" id="counterStatus">
-            Click to confirm your presence.
+    <main class="hero-section">
+        <div class="container">
+            <img src="images/name-logo.png" alt="Lavan Sivakumar" class="main-name-image">
+            <p class="main-tagline">Cybersecurity Analyst (Entry Level)</p>
+            <p class="subline">Vulnerability Research | Secure Development | Penetration Testing</p>
+            
+            <div class="main-buttons">
+                <a href="Lavan_Sivakumar_CV.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download CV</a>
+                <a href="projects.html" class="btn btn-secondary">Projects</a>
+                <a href="hackme.html" class="btn btn-secondary">HackMe Lab</a>
+            </div>
+
+
+            <div>
+            </div>
+            <section class="skills-section">
+                <h2 class="skills-title">Skills</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3 class="skill-card-title">Security & Monitoring</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 2L3 5V8C3 11 8 14 8 14C8 14 13 11 13 8V5L8 2Z" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+                                </svg>
+                                Splunk (SIEM)
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <circle cx="8" cy="8" r="6" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+                                    <circle cx="8" cy="8" r="2" fill="#00ff41"/>
+                                </svg>
+                                Wireshark
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 8L8 3L13 8M8 3V13" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+                                </svg>
+                                Log Analysis
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <rect x="3" y="3" width="10" height="10" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+                                </svg>
+                                Incident Response
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 5H13M5 8H11M7 11H9" stroke="#00ff41" stroke-width="1.5"/>
+                                </svg>
+                                Phishing Investigation
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-card-title">Offensive Security</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <circle cx="8" cy="8" r="6" stroke="#e50914" stroke-width="1.5" fill="none"/>
+                                    <path d="M8 5V8L10 10" stroke="#e50914" stroke-width="1.5"/>
+                                </svg>
+                                Burp Suite
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 3L12 8L8 13L4 8L8 3Z" stroke="#e50914" stroke-width="1.5" fill="none"/>
+                                </svg>
+                                Metasploit
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 8H13M8 3V13" stroke="#e50914" stroke-width="1.5"/>
+                                </svg>
+                                Nmap
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 2L3 5V8C3 11 8 14 8 14C8 14 13 11 13 8V5L8 2Z" stroke="#e50914" stroke-width="1.5" fill="none"/>
+                                </svg>
+                                Kali Linux
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-card-title">Network & Infrastructure</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 2L3 5V8C3 11 8 14 8 14C8 14 13 11 13 8V5L8 2Z" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+                                </svg>
+                                Firewall Config
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <circle cx="5" cy="8" r="2" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+                                    <circle cx="11" cy="8" r="2" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+                                    <path d="M7 8H9" stroke="#00ff41" stroke-width="1.5"/>
+                                </svg>
+                                Packet Analysis
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <rect x="4" y="4" width="8" height="8" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+                                    <path d="M4 7H12M7 4V12" stroke="#00ff41" stroke-width="1.5"/>
+                                </svg>
+                                Subnetting
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 3L13 3M3 8L13 8M3 13L13 13" stroke="#00ff41" stroke-width="1.5"/>
+                                </svg>
+                                Linux/Unix
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <rect x="3" y="5" width="10" height="6" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+                                </svg>
+                                VLAN & Routing
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <rect x="4" y="4" width="8" height="8" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+                                </svg>
+                                Windows Server
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-card-title">Development & Tools</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M5 6L3 8L5 10M11 6L13 8L11 10" stroke="#888888" stroke-width="1.5"/>
+                                </svg>
+                                Python
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M5 6L3 8L5 10M11 6L13 8L11 10" stroke="#888888" stroke-width="1.5"/>
+                                </svg>
+                                Java
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <rect x="4" y="4" width="8" height="8" stroke="#888888" stroke-width="1.5" fill="none"/>
+                                    <path d="M4 7H12M7 4V12" stroke="#888888" stroke-width="1.5"/>
+                                </svg>
+                                SQL
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 5L8 3L13 5V11L8 13L3 11V5Z" stroke="#888888" stroke-width="1.5" fill="none"/>
+                                </svg>
+                                Bash
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <circle cx="8" cy="5" r="2" stroke="#888888" stroke-width="1.5" fill="none"/>
+                                    <circle cx="5" cy="11" r="2" stroke="#888888" stroke-width="1.5" fill="none"/>
+                                    <circle cx="11" cy="11" r="2" stroke="#888888" stroke-width="1.5" fill="none"/>
+                                    <path d="M8 7L8 9M8 9L5 9M8 9L11 9" stroke="#888888" stroke-width="1.5"/>
+                                </svg>
+                                Git/GitHub
+                            </span>
+                            <span class="skill-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 6L8 3L13 6V10L8 13L3 10V6Z" stroke="#888888" stroke-width="1.5" fill="none"/>
+                                </svg>
+                                Azure
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home-certifications">
+                <h3 class="section-heading">Certifications</h3>
+                
+                <div class="carousel-wrapper certs-carousel-wrapper">
+                    <button class="carousel-btn prev" id="certsPrev">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <div class="certs-carousel-container">
+                        <div class="certs-carousel-track" id="certsTrack">
+                            <a href="images/certs/Try Hack Me - Pre Security.pdf" class="cert-card" target="_blank" rel="noopener">
+                                <div class="cert-icon">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                        <path d="M30 5L10 15V30C10 42 30 55 30 55C30 55 50 42 50 30V15L30 5Z" stroke="#e50914" stroke-width="2" fill="none"/>
+                                        <path d="M25 30L28 33L35 26" stroke="#e50914" stroke-width="2" fill="none"/>
+                                    </svg>
+                                </div>
+                                <h4>TryHackMe Pre Security</h4>
+                                <p class="cert-issuer">TryHackMe</p>
+                                <p class="cert-status completed">Completed</p>
+                                <span class="view-cert-link">Click to view certificate →</span>
+                            </a>
+                            <a href="images/certs/Try Hack Me - AoC Completion.pdf" class="cert-card" target="_blank" rel="noopener">
+                                <div class="cert-icon">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                        <circle cx="30" cy="30" r="22" stroke="#00ff41" stroke-width="2" fill="none"/>
+                                        <path d="M30 15L33 25H43L35 31L38 41L30 35L22 41L25 31L17 25H27L30 15Z" fill="#00ff41"/>
+                                    </svg>
+                                </div>
+                                <h4>TryHackMe Advent of Cyber</h4>
+                                <p class="cert-issuer">TryHackMe</p>
+                                <p class="cert-status completed">Completed</p>
+                                <span class="view-cert-link">Click to view certificate →</span>
+                            </a>
+                            <a href="images/certs/Qualys Vulnerability Management.pdf" class="cert-card" target="_blank" rel="noopener">
+                                <div class="cert-icon">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                        <rect x="15" y="15" width="30" height="30" stroke="#e50914" stroke-width="2" fill="none"/>
+                                        <path d="M25 30L28 33L35 26" stroke="#e50914" stroke-width="2" fill="none"/>
+                                        <circle cx="30" cy="30" r="8" stroke="#e50914" stroke-width="1.5" fill="none"/>
+                                    </svg>
+                                </div>
+                                <h4>Vulnerability Management</h4>
+                                <p class="cert-issuer">Qualys</p>
+                                <p class="cert-status completed">Completed</p>
+                                <span class="view-cert-link">Click to view certificate →</span>
+                            </a>
+                            <a href="images/certs/Cyber war Labs - completion certificate .pdf" class="cert-card" target="_blank" rel="noopener">
+                                <div class="cert-icon">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                        <circle cx="30" cy="25" r="8" stroke="#00ff41" stroke-width="2" fill="none"/>
+                                        <rect x="22" y="35" width="16" height="18" stroke="#00ff41" stroke-width="2" fill="none"/>
+                                        <path d="M26 40H34M26 45H34M26 50H34" stroke="#00ff41" stroke-width="1.5"/>
+                                        <circle cx="30" cy="25" r="3" fill="#00ff41"/>
+                                    </svg>
+                                </div>
+                                <h4>Virtual Internship</h4>
+                                <p class="cert-issuer">CyberWarLabs</p>
+                                <p class="cert-status completed">Completed</p>
+                                <span class="view-cert-link">Click to view certificate →</span>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" id="certsNext">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <section class="experience-section">
+                <h2 class="experience-title">Experience</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Dec 2025 - Jan 2026</div>
+                            <h3 class="timeline-role">Cybersecurity Intern (Training Program)</h3>
+                            <p class="timeline-company">Hands-on Security Training</p>
+                            <ul class="timeline-description">
+                                <li>Practical experience with security tools and methodologies</li>
+                                <li>Network security monitoring and incident response training</li>
+                                <li>Vulnerability assessment and penetration testing exercises</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Aug 2024 - May 2025</div>
+                            <h3 class="timeline-role">Student Mentor</h3>
+                            <p class="timeline-company">Nottingham Trent University · Part-time</p>
+                            <ul class="timeline-description">
+                                <li>Guided first-year students academically and technically</li>
+                                <li>Supported transition into university and key modules</li>
+                                <li>Assisted with basic computing and networking topics</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Oct 2022 - Aug 2023</div>
+                            <h3 class="timeline-role">Documentary Content Creator</h3>
+                            <p class="timeline-company">Citizens Connect · Freelance</p>
+                            <ul class="timeline-description">
+                                <li>Created short documentary content on community-level issues</li>
+                                <li>Conducted field research, scripting, filming, and editing</li>
+                                <li>Collaborated with teams to submit and publish documented findings</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Apr 2022 - Aug 2023</div>
+                            <h3 class="timeline-role">Journalist / Field Reporter</h3>
+                            <p class="timeline-company">Tamil CNN News Network · Part-time</p>
+                            <ul class="timeline-description">
+                                <li>Conducted field investigations and incident reporting</li>
+                                <li>Collected information through interviews and on-site analysis</li>
+                                <li>Built strong analytical, communication, and situational awareness skills</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item next-opportunity">
+                        <div class="timeline-marker pulse"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Your Company · Next</div>
+                            <h3 class="timeline-role">Looking for Opportunities</h3>
+                            <p class="timeline-company">Ready to contribute and grow</p>
+                            <div class="opportunity-text">
+                                <p>I'm actively seeking entry-level cybersecurity positions where I can apply my skills in penetration testing, network security, and vulnerability assessment. Let's connect and discuss how I can contribute to your security team.</p>
+                                <a href="contact.html" class="opportunity-btn">Get In Touch →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
+    </main>
 
-</div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://github.com/im-Lavan" target="_blank" rel="noopener">Github</a>
+                    <a href="https://linkedin.com/in/Lavansivakumar" target="_blank" rel="noopener">Linkedin</a>
+                    <a href="mailto:imlavansivakumar@gmail.com">Email</a>
+                    <a href="coffee.html">Coffee</a>
+                </div>
+                <p class="footer-text">© 2026 Lavan Sivakumar</p>
+            </div>
+        </div>
+    </footer>
 
-<script>
-/* Matrix Rain */
-const canvas = document.getElementById('matrix');
-const ctx = canvas.getContext('2d');
-canvas.width = innerWidth;
-canvas.height = innerHeight;
-
-const chars = '01アイウエオカキクケコサシスセソタチツテト';
-const drops = Array(Math.floor(canvas.width / 14)).fill(1);
-
-function drawMatrix() {
-    ctx.fillStyle = 'rgba(10,10,10,0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#0f0';
-    ctx.font = '14px monospace';
-
-    drops.forEach((y, i) => {
-        const text = chars[Math.floor(Math.random() * chars.length)];
-        ctx.fillText(text, i * 14, y * 14);
-
-        if (y * 14 > canvas.height && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
-    });
-}
-setInterval(drawMatrix, 35);
-
-window.addEventListener('resize', () => {
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
-});
-
-/* Particles */
-function createParticles() {
-    const container = document.getElementById('particles');
-    for (let i = 0; i < 50; i++) {
-        const dot = document.createElement('div');
-        dot.className = 'particle';
-        dot.style.left = Math.random() * 100 + '%';
-        dot.style.animationDuration = Math.random() * 10 + 10 + 's';
-        dot.style.animationDelay = Math.random() * 5 + 's';
-        container.appendChild(dot);
-    }
-}
-createParticles();
-
-/* Countdown Timer */
-const launch = new Date('2026-01-31T00:00:00').getTime();
-
-function updateCountdown() {
-    const now = Date.now();
-    const diff = launch - now;
-
-    const d = Math.floor(diff / 86400000);
-    const h = Math.floor((diff % 86400000) / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-
-    document.getElementById('days').textContent = String(d).padStart(2, '0');
-    document.getElementById('hours').textContent = String(h).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(m).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(s).padStart(2, '0');
-}
-updateCountdown();
-setInterval(updateCountdown, 1000);
-
-/* Visitor Check-In */
-const btn = document.getElementById('incrementBtn');
-const status = document.getElementById('counterStatus');
-
-if (localStorage.getItem("visited") === "yes") {
-    btn.disabled = true;
-    status.textContent = "✓ Visit confirmed earlier";
-    status.classList.add("status-active");
-}
-
-btn.addEventListener("click", () => {
-    localStorage.setItem("visited", "yes");
-    btn.disabled = true;
-    status.textContent = "✓ Visit recorded. Thank you.";
-    status.classList.add("status-active");
-});
-
-</script>
+    <script src="js/main.js"></script>
 </body>
 </html>
-
-

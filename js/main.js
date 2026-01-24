@@ -1,0 +1,126 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const botIcon = document.getElementById('botIcon');
+    const headline = document.querySelector('.headline');
+    
+    if (botIcon && headline && window.innerWidth > 768) {
+        let animationFrameId = null;
+        
+        function updateBotPosition(e) {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+            
+            animationFrameId = requestAnimationFrame(() => {
+                const headlineRect = headline.getBoundingClientRect();
+                const headlineCenter = {
+                    x: headlineRect.left + headlineRect.width / 2,
+                    y: headlineRect.top + headlineRect.height / 2
+                };
+                
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+                
+                const deltaX = mouseX - headlineCenter.x;
+                const deltaY = mouseY - headlineCenter.y;
+                
+                const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                const maxDistance = 300;
+                
+                if (distance < maxDistance) {
+                    const intensity = 1 - (distance / maxDistance);
+                    
+                    const maxRotation = 15;
+                    const maxTilt = 10;
+                    
+                    const rotationZ = (deltaX / maxDistance) * maxRotation * intensity;
+                    const rotationX = -(deltaY / maxDistance) * maxTilt * intensity;
+                    
+                    botIcon.style.transform = `translateX(-50%) rotateZ(${rotationZ}deg) rotateX(${rotationX}deg)`;
+                } else {
+                    botIcon.style.transform = 'translateX(-50%) rotateZ(0deg) rotateX(0deg)';
+                }
+            });
+        }
+        
+        document.addEventListener('mousemove', updateBotPosition);
+        
+        headline.addEventListener('mouseleave', function() {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+            botIcon.style.transform = 'translateX(-50%) rotateZ(0deg) rotateX(0deg)';
+        });
+    }
+    
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    
+    if (contactForm && formStatus) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                formStatus.className = 'form-status success';
+                formStatus.textContent = 'Message sent successfully! (Frontend only - no actual submission)';
+                
+                contactForm.reset();
+                
+                setTimeout(function() {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            } else {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Please fill in all fields.';
+            }
+        });
+    }
+});
+// Certifications Carousel
+(function() {
+    const track = document.getElementById('certsTrack');
+    const prevBtn = document.getElementById('certsPrev');
+    const nextBtn = document.getElementById('certsNext');
+    
+    if (!track || !prevBtn || !nextBtn) return;
+    
+    let currentIndex = 0;
+    const cards = track.querySelectorAll('.cert-card');
+    let itemsPerView = window.innerWidth > 768 ? 2 : 1;
+    
+    function updateCarousel() {
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 32; // 2rem in pixels
+        const offset = -(currentIndex * (cardWidth + gap));
+        track.style.transform = `translateX(${offset}px)`;
+        
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= cards.length - itemsPerView;
+    }
+    
+    function updateItemsPerView() {
+        itemsPerView = window.innerWidth > 768 ? 2 : 1;
+        currentIndex = 0;
+        updateCarousel();
+    }
+    
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < cards.length - itemsPerView) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+    
+    window.addEventListener('resize', updateItemsPerView);
+    updateItemsPerView();
+})();

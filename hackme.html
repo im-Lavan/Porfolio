@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackMe Lab - Lavan Sivakumar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    
+    <nav class="navbar">
+        <div class="container">
+            <div class="terminal-prompt"> </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="hackme.html" class="active">HackMe</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="content-section">
+        <div class="container">
+            <h1 class="page-title">Hackme lab</h1>
+            
+            <div class="warning-banner">
+                <div>
+                    <strong>Warning: Intentionally Vulnerable Environment</strong>
+                    <p>Educational testing lab with known security vulnerabilities. For educational purposes only.</p>
+                </div>
+            </div>
+
+            <div class="countdown-container">
+                <h2 class="countdown-title">Lab Launch Countdown</h2>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                <p class="countdown-status">Currently in development - Coming Soon!</p>
+            </div>
+            
+            <div class="hackme-intro">
+                <h2>About the HackMe Lab</h2>
+                <p>An intentionally vulnerable web application platform designed for hands-on cybersecurity education. This comprehensive testing environment provides a safe, legal, and isolated space to practice penetration testing techniques, understand common web vulnerabilities, and develop both offensive and defensive security skills.</p>
+            </div>
+
+            <div class="features-section">
+                <div class="feature-column">
+                    <h3>Core Features</h3>
+                    <div class="feature-box">
+                        <div class="feature-item">
+                            <span class="feature-icon">🎯</span>
+                            <p>OWASP Top 10 vulnerabilities in realistic scenarios</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💉</span>
+                            <p>Multi-level SQL Injection challenges</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">⚡</span>
+                            <p>XSS exploitation with DOM and Stored variants</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔓</span>
+                            <p>Authentication bypass vulnerabilities</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🌐</span>
+                            <p>Server-Side Request Forgery simulations</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📤</span>
+                            <p>Command injection & file upload vulnerabilities</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🚪</span>
+                            <p>Broken Access Control with privilege escalation</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔐</span>
+                            <p>Cryptographic failures & insecure deserialization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-column">
+                    <h3>Learning Objectives</h3>
+                    <div class="feature-box">
+                        <div class="feature-item">
+                            <span class="feature-icon">🔍</span>
+                            <div>
+                                <strong>Vulnerability Identification</strong>
+                                <p>Learn to identify security flaws through manual testing and automated scanning</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">⚔️</span>
+                            <div>
+                                <strong>Exploitation Techniques</strong>
+                                <p>Practice exploiting vulnerabilities ethically in a controlled environment</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🛠️</span>
+                            <div>
+                                <strong>Tool Proficiency</strong>
+                                <p>Gain hands-on experience with Burp Suite, SQLMap, OWASP ZAP</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💻</span>
+                            <div>
+                                <strong>Secure Coding</strong>
+                                <p>Understand how vulnerabilities occur and how to prevent them</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔧</span>
+                            <div>
+                                <strong>Remediation Strategies</strong>
+                                <p>Develop effective solutions to fix and mitigate security issues</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🛡️</span>
+                            <div>
+                                <strong>Defensive Thinking</strong>
+                                <p>Build a security-first mindset by understanding attacker methodologies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-title">Use Cases</h3>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <h4>🎓 Students & Learners</h4>
+                    <p>Perfect for cybersecurity students to practice concepts learned in courses with real-world scenarios without legal or ethical concerns.</p>
+                </div>
+                <div class="use-case-card">
+                    <h4>🔍 Security Professionals</h4>
+                    <p>Ideal for penetration testers and security analysts to sharpen skills, test new tools, and stay updated on vulnerability techniques.</p>
+                </div>
+                <div class="use-case-card">
+                    <h4>💻 Developers</h4>
+                    <p>Helps developers understand security implications of coding decisions and learn to write more secure applications.</p>
+                </div>
+                <div class="use-case-card">
+                    <h4>🏆 CTF Preparation</h4>
+                    <p>Excellent training ground for Capture The Flag competitions with progressively challenging vulnerability scenarios.</p>
+                </div>
+            </div>
+
+            <div class="lab-details">
+                <h3>Lab Environment Details</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <strong>Technology Stack</strong>
+                        <p>Python (Flask), JavaScript, SQL database</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Difficulty Levels</strong>
+                        <p>Beginner, Intermediate, Advanced</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Documentation</strong>
+                        <p>Detailed writeups & remediation guides</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Progress Tracking</strong>
+                        <p>Built-in progress indicators</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Hints System</strong>
+                        <p>Progressive hints for learners</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Security</strong>
+                        <p>Completely sandboxed environment</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="security-notes">
+                <h3>⚠️ Important Security Notes</h3>
+                <ul>
+                    <li>This environment contains zero real user data</li>
+                    <li>All vulnerabilities are intentional and documented</li>
+                    <li>Techniques should ONLY be used on authorized systems</li>
+                    <li>Always practice ethical hacking and responsible disclosure</li>
+                    <li>Unauthorized access to real systems is illegal</li>
+                </ul>
+            </div>
+
+            <div class="lab-access">
+                <h2>Coming Soon</h2>
+                <p>The HackMe Lab is currently in active development. Once launched, it will be hosted with appropriate security controls and monitoring.</p>
+                <button class="btn btn-danger" disabled>Lab Under Development</button>
+                <p class="disclaimer">Expected launch: <strong>February 2026</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://github.com/im-Lavan" target="_blank" rel="noopener">Github</a>
+                    <a href="https://linkedin.com/in/Lavansivakumar" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="mailto:imlavansivakumar@gmail.com">Email</a>
+                    <a href="coffee.html">Coffee</a>
+                </div>
+                <p class="footer-text">© 2024 Lavan Sivakumar</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/countdown.js"></script>
+</body>
+</html>
