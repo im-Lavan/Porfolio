@@ -51,33 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
             botIcon.style.transform = 'translateX(-50%) rotateZ(0deg) rotateX(0deg)';
         });
     }
-    
-    const contactForm = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus');
-    
-    if (contactForm && formStatus) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            if (name && email && message) {
-                formStatus.className = 'form-status success';
-                formStatus.textContent = 'Message sent successfully! (Frontend only - no actual submission)';
-                
-                contactForm.reset();
-                
-                setTimeout(function() {
-                    formStatus.style.display = 'none';
-                }, 5000);
-            } else {
-                formStatus.className = 'form-status error';
-                formStatus.textContent = 'Please fill in all fields.';
-            }
-        });
-    }
 });
 // Certifications Carousel
 (function() {
@@ -143,8 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
             statusDiv.className = 'form-status';
             
             // Replace these with your actual IDs from EmailJS
-            const serviceID = 'service_uc59ga6';      // e.g., 'service_abc123'
-            const templateID = 'template_yq4jdfp';    // e.g., 'template_xyz789'
+            const serviceID = 'service_uc59ga6';      // Get this from EmailJS dashboard
+            const templateID = 'template_yq4jdfp';    // Get this from EmailJS dashboard (the notification template)
             
             // Send email using EmailJS
             emailjs.sendForm(serviceID, templateID, this)
