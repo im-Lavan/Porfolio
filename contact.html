@@ -11,7 +11,7 @@
     
     <nav class="navbar">
         <div class="container">
-            <div class="terminal-prompt"> </div>
+            <div class="terminal-prompt">guest@portfolio:~$</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -24,11 +24,11 @@
 
     <main class="content-section">
         <div class="container">
-            <h1 class="page-title"> </h1>
+            <h1 class="page-title">Let's Connect</h1>
             
             <div class="contact-wrapper">
-             <div class="contact-info">
-                    <h2>Let's Connect</h2>
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
                     <p>Whether you have a question about cybersecurity, want to collaborate on a project, or just want to say hello, feel free to reach out.</p>
 
                     <div class="social-links">
@@ -57,26 +57,29 @@
                     </div>
                 </div>
 
-               <form class="contact-form" id="contactForm">
-    <div class="form-group">
-        <label for="name">$ enter_name</label>
-        <input type="text" name="name" id="name" placeholder="John Doe" required>
-    </div>
+                <form action="https://formspree.io/f/xykeaand" method="POST" class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">$ enter_name</label>
+                        <input type="text" name="name" id="name" placeholder="John Doe" required>
+                    </div>
 
-    <div class="form-group">
-        <label for="email">$ enter_email</label>
-        <input type="email" name="email" id="email" placeholder="john@example.com" required>
-    </div>
+                    <div class="form-group">
+                        <label for="email">$ enter_email</label>
+                        <input type="email" name="email" id="email" placeholder="john@example.com" required>
+                    </div>
 
-    <div class="form-group">
-        <label for="message">$ enter_message</label>
-        <textarea name="message" id="message" rows="6" placeholder="Your message here..." required></textarea>
-    </div>
+                    <div class="form-group">
+                        <label for="message">$ enter_message</label>
+                        <textarea name="message" id="message" rows="6" placeholder="Your message here..." required></textarea>
+                    </div>
 
-    <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
-    
-    <div id="formStatus" class="form-status"></div>
-</form>
+                    <!-- Formspree's honeypot spam protection -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    
+                    <div id="formStatus" class="form-status"></div>
+                </form>
             </div>
         </div>
     </main>
@@ -85,22 +88,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="https://github.com/im-Lavan" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://linkedin.com/in/Lavansivakumar" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/im-Lavan" target="_blank" rel="noopener">Github</a>
+                    <a href="https://linkedin.com/in/Lavansivakumar" target="_blank" rel="noopener">Linkedin</a>
                     <a href="mailto:imlavansivakumar@gmail.com">Email</a>
-                    <a href="coffee.html">Support</a>
+                    <a href="coffee.html">Coffee</a>
                 </div>
-                <p class="footer-text">© 2024 Lavan Sivakumar</p>
+                <p class="footer-text">© 2026 Lavan Sivakumar</p>
             </div>
         </div>
     </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function() {
-            emailjs.init("_-I9-DAIY3VBySpoJ");
-        })();
-    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
