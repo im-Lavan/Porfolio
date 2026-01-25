@@ -1,6 +1,6 @@
 # Cybersecurity Portfolio
 
-<img width="960" height="512" alt="image" src="https://github.com/user-attachments/assets/e16e74a3-9491-4ad2-b3ce-cbd18e77a7b4" />
+<img width="948" height="450" alt="image" src="https://github.com/user-attachments/assets/00e5a120-fbb8-409b-98e8-151d999b07d2" />
 
 Personal portfolio website showcasing cybersecurity projects, skills, certifications, and experience.
 
