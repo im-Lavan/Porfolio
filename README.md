@@ -2,7 +2,7 @@
 
 <img width="948" height="450" alt="image" src="https://github.com/user-attachments/assets/00e5a120-fbb8-409b-98e8-151d999b07d2" />
 
-Personal portfolio website showcasing cybersecurity projects, skills, certifications, and experience.
+- Personal portfolio website showcasing cybersecurity projects, skills, certifications, and experience.
 - 🔗 **Live Site:** [lavansivakumar.co.uk](https://lavansivakumar.co.uk)
 
 ## Features
