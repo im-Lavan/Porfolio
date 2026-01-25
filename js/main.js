@@ -98,3 +98,62 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', updateItemsPerView);
     updateItemsPerView();
 })();
+
+// Contact Form Handler with Formspree AJAX
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const statusDiv = document.getElementById('formStatus');
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const formData = new FormData(contactForm);
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            statusDiv.textContent = '';
+            statusDiv.className = 'form-status';
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success
+                    statusDiv.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+                    statusDiv.classList.add('success');
+                    statusDiv.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        statusDiv.style.display = 'none';
+                    }, 5000);
+                } else {
+                    // Error
+                    statusDiv.textContent = '✗ Failed to send message. Please email me directly at imlavansivakumar@gmail.com';
+                    statusDiv.classList.add('error');
+                    statusDiv.style.display = 'block';
+                }
+            } catch (error) {
+                // Network error
+                statusDiv.textContent = '✗ Failed to send message. Please email me directly at imlavansivakumar@gmail.com';
+                statusDiv.classList.add('error');
+                statusDiv.style.display = 'block';
+                console.error('Form submission error:', error);
+            } finally {
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        });
+    }
+});
