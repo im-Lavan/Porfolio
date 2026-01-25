@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lavan Sivakumar - Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Quick inline style to center name image */
+        .hero-content {
+            text-align: center;
+        }
+        .hero-name-image {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="scanlines"></div>
     
     <nav class="navbar">
         <div class="container">
-            <div class="terminal-prompt"> </div>
+            <div class="terminal-prompt">guest@portfolio:~$</div>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -24,52 +34,65 @@
 
     <main class="hero-section">
         <div class="container">
-            <img src="images/name-logo.png" alt="Lavan Sivakumar" class="main-name-image">
-            <p class="main-tagline">Cybersecurity Analyst (Entry Level)</p>
-            <p class="subline">Vulnerability Research | Secure Development | Penetration Testing</p>
-            
-            <div class="main-buttons">
-                <a href="Lavan_Sivakumar_CV.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download CV</a>
-                <a href="projects.html" class="btn btn-secondary">Projects</a>
-                <a href="hackme.html" class="btn btn-secondary">HackMe Lab</a>
-            </div>
-
-
-            <div>
-            </div>
-            <section class="skills-section">
-                <h2 class="skills-title">Skills</h2>
+            <div class="hero-content">
+                <p class="hero-greeting">Hello, World.</p>
+                <img src="images/name-logo.png" alt="Lavan Sivakumar" class="hero-name-image">
+                <p class="hero-title">Cybersecurity Analyst (Entry Level)</p>
+                <p class="hero-subtitle">Vulnerability Research | Secure Development | Penetration Testing</p>
                 
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3 class="skill-card-title">Security & Monitoring</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">
+                <div class="hero-buttons">
+                    <a href="Lavan_Sivakumar_CV.pdf" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 14L5 9L6.4 7.6L9 10.2V3H11V10.2L13.6 7.6L15 9L10 14Z" fill="currentColor"/>
+                            <path d="M3 17V13H5V15H15V13H17V17H3Z" fill="currentColor"/>
+                        </svg>
+                        Download CV
+                    </a>
+                    <a href="hackme.html" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2L3 6V10C3 14 10 18 10 18C10 18 17 14 17 10V6L10 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        </svg>
+                        HackMe Lab
+                    </a>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <section class="section-wrapper" id="skills">
+                <h2 class="section-number">03. ~/skills</h2>
+                <div class="section-divider"></div>
+                
+                <div class="skills-grid-modern">
+                    <div class="skill-category">
+                        <h3>Security & Monitoring</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M8 2L3 5V8C3 11 8 14 8 14C8 14 13 11 13 8V5L8 2Z" stroke="#00ff41" stroke-width="1.5" fill="none"/>
                                 </svg>
                                 Splunk (SIEM)
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <circle cx="8" cy="8" r="6" stroke="#00ff41" stroke-width="1.5" fill="none"/>
                                     <circle cx="8" cy="8" r="2" fill="#00ff41"/>
                                 </svg>
                                 Wireshark
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M3 8L8 3L13 8M8 3V13" stroke="#00ff41" stroke-width="1.5" fill="none"/>
                                 </svg>
                                 Log Analysis
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <rect x="3" y="3" width="10" height="10" stroke="#00ff41" stroke-width="1.5" fill="none"/>
                                 </svg>
                                 Incident Response
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M3 5H13M5 8H11M7 11H9" stroke="#00ff41" stroke-width="1.5"/>
                                 </svg>
@@ -78,29 +101,29 @@
                         </div>
                     </div>
 
-                    <div class="skill-card">
-                        <h3 class="skill-card-title">Offensive Security</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">
+                    <div class="skill-category">
+                        <h3>Offensive Security</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <circle cx="8" cy="8" r="6" stroke="#e50914" stroke-width="1.5" fill="none"/>
                                     <path d="M8 5V8L10 10" stroke="#e50914" stroke-width="1.5"/>
                                 </svg>
                                 Burp Suite
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M8 3L12 8L8 13L4 8L8 3Z" stroke="#e50914" stroke-width="1.5" fill="none"/>
                                 </svg>
                                 Metasploit
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M3 8H13M8 3V13" stroke="#e50914" stroke-width="1.5"/>
                                 </svg>
                                 Nmap
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M8 2L3 5V8C3 11 8 14 8 14C8 14 13 11 13 8V5L8 2Z" stroke="#e50914" stroke-width="1.5" fill="none"/>
                                 </svg>
@@ -109,16 +132,16 @@
                         </div>
                     </div>
 
-                    <div class="skill-card">
-                        <h3 class="skill-card-title">Network & Infrastructure</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">
+                    <div class="skill-category">
+                        <h3>Network & Infrastructure</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M8 2L3 5V8C3 11 8 14 8 14C8 14 13 11 13 8V5L8 2Z" stroke="#00ff41" stroke-width="1.5" fill="none"/>
                                 </svg>
                                 Firewall Config
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <circle cx="5" cy="8" r="2" stroke="#00ff41" stroke-width="1.5" fill="none"/>
                                     <circle cx="11" cy="8" r="2" stroke="#00ff41" stroke-width="1.5" fill="none"/>
@@ -126,26 +149,26 @@
                                 </svg>
                                 Packet Analysis
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <rect x="4" y="4" width="8" height="8" stroke="#00ff41" stroke-width="1.5" fill="none"/>
                                     <path d="M4 7H12M7 4V12" stroke="#00ff41" stroke-width="1.5"/>
                                 </svg>
                                 Subnetting
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M3 3L13 3M3 8L13 8M3 13L13 13" stroke="#00ff41" stroke-width="1.5"/>
                                 </svg>
                                 Linux/Unix
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <rect x="3" y="5" width="10" height="6" stroke="#00ff41" stroke-width="1.5" fill="none"/>
                                 </svg>
                                 VLAN & Routing
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <rect x="4" y="4" width="8" height="8" stroke="#00ff41" stroke-width="1.5" fill="none"/>
                                 </svg>
@@ -154,35 +177,35 @@
                         </div>
                     </div>
 
-                    <div class="skill-card">
-                        <h3 class="skill-card-title">Development & Tools</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">
+                    <div class="skill-category">
+                        <h3>Development & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M5 6L3 8L5 10M11 6L13 8L11 10" stroke="#888888" stroke-width="1.5"/>
                                 </svg>
                                 Python
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M5 6L3 8L5 10M11 6L13 8L11 10" stroke="#888888" stroke-width="1.5"/>
                                 </svg>
                                 Java
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <rect x="4" y="4" width="8" height="8" stroke="#888888" stroke-width="1.5" fill="none"/>
                                     <path d="M4 7H12M7 4V12" stroke="#888888" stroke-width="1.5"/>
                                 </svg>
                                 SQL
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M3 5L8 3L13 5V11L8 13L3 11V5Z" stroke="#888888" stroke-width="1.5" fill="none"/>
                                 </svg>
                                 Bash
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <circle cx="8" cy="5" r="2" stroke="#888888" stroke-width="1.5" fill="none"/>
                                     <circle cx="5" cy="11" r="2" stroke="#888888" stroke-width="1.5" fill="none"/>
@@ -191,7 +214,7 @@
                                 </svg>
                                 Git/GitHub
                             </span>
-                            <span class="skill-item">
+                            <span class="skill-tag">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M3 6L8 3L13 6V10L8 13L3 10V6Z" stroke="#888888" stroke-width="1.5" fill="none"/>
                                 </svg>
@@ -202,80 +225,69 @@
                 </div>
             </section>
 
-            <section class="home-certifications">
-                <h3 class="section-heading">Certifications</h3>
+            <!-- Certifications Section -->
+            <section class="section-wrapper" id="certifications">
+                <h2 class="section-number">04. cat certs</h2>
+                <div class="section-divider"></div>
                 
-                <div class="carousel-wrapper certs-carousel-wrapper">
-                    <button class="carousel-btn prev" id="certsPrev">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </button>
-                    <div class="certs-carousel-container">
-                        <div class="certs-carousel-track" id="certsTrack">
-                            <a href="images/certs/Try Hack Me - Pre Security.pdf" class="cert-card" target="_blank" rel="noopener">
-                                <div class="cert-icon">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                        <path d="M30 5L10 15V30C10 42 30 55 30 55C30 55 50 42 50 30V15L30 5Z" stroke="#e50914" stroke-width="2" fill="none"/>
-                                        <path d="M25 30L28 33L35 26" stroke="#e50914" stroke-width="2" fill="none"/>
-                                    </svg>
-                                </div>
-                                <h4>TryHackMe Pre Security</h4>
-                                <p class="cert-issuer">TryHackMe</p>
-                                <p class="cert-status completed">Completed</p>
-                                <span class="view-cert-link">Click to view certificate →</span>
-                            </a>
-                            <a href="images/certs/Try Hack Me - AoC Completion.pdf" class="cert-card" target="_blank" rel="noopener">
-                                <div class="cert-icon">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                        <circle cx="30" cy="30" r="22" stroke="#00ff41" stroke-width="2" fill="none"/>
-                                        <path d="M30 15L33 25H43L35 31L38 41L30 35L22 41L25 31L17 25H27L30 15Z" fill="#00ff41"/>
-                                    </svg>
-                                </div>
-                                <h4>TryHackMe Advent of Cyber</h4>
-                                <p class="cert-issuer">TryHackMe</p>
-                                <p class="cert-status completed">Completed</p>
-                                <span class="view-cert-link">Click to view certificate →</span>
-                            </a>
-                            <a href="images/certs/Qualys Vulnerability Management.pdf" class="cert-card" target="_blank" rel="noopener">
-                                <div class="cert-icon">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                        <rect x="15" y="15" width="30" height="30" stroke="#e50914" stroke-width="2" fill="none"/>
-                                        <path d="M25 30L28 33L35 26" stroke="#e50914" stroke-width="2" fill="none"/>
-                                        <circle cx="30" cy="30" r="8" stroke="#e50914" stroke-width="1.5" fill="none"/>
-                                    </svg>
-                                </div>
-                                <h4>Vulnerability Management</h4>
-                                <p class="cert-issuer">Qualys</p>
-                                <p class="cert-status completed">Completed</p>
-                                <span class="view-cert-link">Click to view certificate →</span>
-                            </a>
-                            <a href="images/certs/Cyber war Labs - completion certificate .pdf" class="cert-card" target="_blank" rel="noopener">
-                                <div class="cert-icon">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                        <circle cx="30" cy="25" r="8" stroke="#00ff41" stroke-width="2" fill="none"/>
-                                        <rect x="22" y="35" width="16" height="18" stroke="#00ff41" stroke-width="2" fill="none"/>
-                                        <path d="M26 40H34M26 45H34M26 50H34" stroke="#00ff41" stroke-width="1.5"/>
-                                        <circle cx="30" cy="25" r="3" fill="#00ff41"/>
-                                    </svg>
-                                </div>
-                                <h4>Virtual Internship</h4>
-                                <p class="cert-issuer">CyberWarLabs</p>
-                                <p class="cert-status completed">Completed</p>
-                                <span class="view-cert-link">Click to view certificate →</span>
-                            </a>
+                <div class="certs-grid">
+                    <a href="images/certs/Try Hack Me - Pre Security.pdf" class="cert-card-modern" target="_blank" rel="noopener">
+                        <div class="cert-icon-modern">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M20 5L10 12V22C10 28 20 35 20 35C20 35 30 28 30 22V12L20 5Z" stroke="#e50914" stroke-width="2" fill="none"/>
+                                <path d="M16 20L18 22L24 16" stroke="#e50914" stroke-width="2" fill="none"/>
+                            </svg>
                         </div>
-                    </div>
-                    <button class="carousel-btn next" id="certsNext">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </button>
+                        <h4>TryHackMe Pre Security</h4>
+                        <p class="cert-issuer">TryHackMe</p>
+                        <p class="cert-status-modern completed">Completed</p>
+                    </a>
+
+                    <a href="images/certs/Try Hack Me - AoC Completion.pdf" class="cert-card-modern" target="_blank" rel="noopener">
+                        <div class="cert-icon-modern">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="16" stroke="#00ff41" stroke-width="2" fill="none"/>
+                                <path d="M20 10L22 18H30L24 22L26 30L20 24L14 30L16 22L10 18H18L20 10Z" fill="#00ff41"/>
+                            </svg>
+                        </div>
+                        <h4>TryHackMe Advent of Cyber</h4>
+                        <p class="cert-issuer">TryHackMe</p>
+                        <p class="cert-status-modern completed">Completed</p>
+                    </a>
+
+                    <a href="images/certs/Qualys Vulnerability Management.pdf" class="cert-card-modern" target="_blank" rel="noopener">
+                        <div class="cert-icon-modern">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="12" y="12" width="16" height="16" stroke="#e50914" stroke-width="2" fill="none"/>
+                                <path d="M16 20L18 22L24 16" stroke="#e50914" stroke-width="2" fill="none"/>
+                                <circle cx="20" cy="20" r="5" stroke="#e50914" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h4>Vulnerability Management</h4>
+                        <p class="cert-issuer">Qualys</p>
+                        <p class="cert-status-modern completed">Completed</p>
+                    </a>
+
+                    <a href="images/certs/Cyber war Labs - completion certificate .pdf" class="cert-card-modern" target="_blank" rel="noopener">
+                        <div class="cert-icon-modern">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="16" r="6" stroke="#00ff41" stroke-width="2" fill="none"/>
+                                <rect x="16" y="24" width="8" height="10" stroke="#00ff41" stroke-width="2" fill="none"/>
+                                <path d="M18 27H22M18 30H22" stroke="#00ff41" stroke-width="1.5"/>
+                                <circle cx="20" cy="16" r="2" fill="#00ff41"/>
+                            </svg>
+                        </div>
+                        <h4>Virtual Internship</h4>
+                        <p class="cert-issuer">CyberWarLabs</p>
+                        <p class="cert-status-modern completed">Completed</p>
+                    </a>
                 </div>
             </section>
 
-            <section class="experience-section">
-                <h2 class="experience-title">Experience</h2>
+            <!-- Experience Section -->
+            <section class="section-wrapper" id="experience">
+                <h2 class="section-number">05. experience</h2>
+                <div class="section-divider"></div>
                 
                 <div class="timeline">
                     <div class="timeline-item">
@@ -347,6 +359,13 @@
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="cta-section">
+                <h2>Ready to collaborate?</h2>
+                <p>Let's discuss how I can contribute to your security team</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Get In Touch →</a>
             </section>
         </div>
     </main>
