@@ -2890,10 +2890,12 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 3rem;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     transition: all var(--transition);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .tryhackme-container:hover {
@@ -2913,7 +2915,7 @@ body {
 
 .tryhackme-badge-img {
     max-width: 100%;
-    width: 600px;
+    width: 500px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -2922,15 +2924,16 @@ body {
 .tryhackme-description {
     margin-top: 1.5rem;
     color: var(--text-secondary);
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.7;
-    max-width: 600px;
+    max-width: 100%;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .tryhackme-container {
         padding: 1.5rem;
+        max-width: 100%;
     }
 
     .tryhackme-badge-img {
