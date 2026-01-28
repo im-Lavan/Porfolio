@@ -2880,3 +2880,80 @@ body {
         padding: 1rem;
     }
 }
+
+/* ========================================
+   TRYHACKME PROFILE SECTION
+   ======================================== */
+
+.tryhackme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition);
+}
+
+.tryhackme-container:hover {
+    border-color: var(--accent-red);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.15);
+}
+
+.tryhackme-badge-link {
+    display: block;
+    transition: transform var(--transition);
+}
+
+.tryhackme-badge-link:hover {
+    transform: scale(1.02);
+}
+
+.tryhackme-badge-img {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tryhackme-description {
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .tryhackme-container {
+        padding: 1.5rem;
+    }
+
+    .tryhackme-badge-img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .tryhackme-description {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tryhackme-container {
+        padding: 1rem;
+    }
+
+    .tryhackme-badge-img {
+        max-width: 100%;
+    }
+
+    .tryhackme-description {
+        font-size: 0.85rem;
+    }
+}
