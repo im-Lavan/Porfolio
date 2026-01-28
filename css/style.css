@@ -2880,3 +2880,30 @@ body {
         padding: 1rem;
     }
 }
+
+/* ========================================
+   TRYHACKME BADGE SECTION
+   ======================================== */
+
+.tryhackme-badge-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    padding: 1rem;
+}
+
+.tryhackme-badge-section iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .tryhackme-badge-section {
+        margin: 2rem 0;
+    }
+
+    .tryhackme-badge-section iframe {
+        transform: scale(0.9);
+    }
+}
