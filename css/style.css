@@ -2885,6 +2885,15 @@ body {
    TRYHACKME PROFILE SECTION
    ======================================== */
 
+#tryhackme {
+    text-align: center;
+}
+
+#tryhackme .section-divider {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .tryhackme-container {
     display: flex;
     flex-direction: column;
@@ -2926,7 +2935,8 @@ body {
     color: var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.7;
-    max-width: 100%;
+    max-width: 600px;
+    padding: 0 1rem;
 }
 
 /* Mobile Responsive */
@@ -2944,6 +2954,7 @@ body {
     .tryhackme-description {
         font-size: 0.9rem;
         margin-top: 1rem;
+        max-width: 100%;
     }
 }
 
