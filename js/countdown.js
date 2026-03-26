@@ -1,7 +1,7 @@
 // Countdown Timer - Fixed Target Date
 (function() {
-    // Set target date to February 24, 2026, 00:00:00
-    const targetDate = new Date('2026-02-24T00:00:00').getTime();
+    // Set target date to April 26, 2026, 00:00:00
+    const targetDate = new Date('2026-04-26T00:00:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
