@@ -3,6 +3,8 @@
 A personal portfolio website showcasing my cybersecurity skills, projects, certifications, and educational resources.
 
 **Live Site:** [lavansivakumar.co.uk](https://lavansivakumar.co.uk)
+<img width="1653" height="600" alt="image" src="https://github.com/user-attachments/assets/84e1ba9b-ca5c-437d-bb58-a84665db9568" />
+
 
 ## Overview
 
