@@ -1,7 +1,7 @@
 // Countdown Timer - Fixed Target Date
 (function() {
     // Set target date to June 5, 2026, 00:00:00 (extended +35 days)
-    const targetDate = new Date('2026-06-05T00:00:00').getTime();
+    const targetDate = new Date('2026-12-15T00:00:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
